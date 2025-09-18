@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>IKT · Projects Portfolio</title>
+  <meta name="description" content="A clean, single-file portfolio for showcasing software projects. Drop this on GitHub Pages and edit the JSON to update." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Tailwind config: enable dark mode via class
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui'] }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Smooth card hover */
+    .card { transition: transform 180ms ease, box-shadow 180ms ease; }
+    .card:hover { transform: translateY(-2px); box-shadow: 0 10px 18px rgba(0,0,0,0.08); }
+  </style>
+</head>
+<body class="bg-zinc-50 text-zinc-900 dark:bg-zinc-900 dark:text-zinc-100">
+  <!-- Header / Nav -->
+  <header class="sticky top-0 z-30 backdrop-blur supports-[backdrop-filter]:bg-white/60 bg-white/90 dark:bg-zinc-900/90 border-b border-zinc-200 dark:border-zinc-800">
+    <div class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
+      <a href="#" class="font-bold tracking-tight text-lg">IKT · Portfolio</a>
+      <nav class="hidden sm:flex gap-6 text-sm">
+        <a href="#projects" class="hover:opacity-80">Projects</a>
+        <a href="#about" class="hover:opacity-80">About</a>
+        <a href="#contact" class="hover:opacity-80">Contact</a>
+      </nav>
+      <button id="modeBtn" aria-label="Toggle dark mode" class="rounded-xl px-3 py-1.5 text-sm border border-zinc-300 dark:border-zinc-700 hover:bg-zinc-100 dark:hover:bg-zinc-800">Dark</button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="mx-auto max-w-6xl px-4 pt-10 pb-6">
+    <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+      <div>
+        <h1 class="text-3xl md:text-5xl font-extrabold leading-tight">
+          Practical software for factories · Digital twins · CAD automation
+        </h1>
+        <p class="mt-4 text-zinc-600 dark:text-zinc-400">
+          20+ years in transformer manufacturing → transitioning into IT/OT and software. I build 
+          <strong>Python</strong> and <strong>C++</strong> tools (PySide6, VTK, OpenCascade, Dash, FastAPI) that solve real production problems.
+        </p>
+        <div class="mt-5 flex gap-3">
+          <a href="#projects" class="inline-block rounded-xl bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 px-4 py-2 text-sm font-semibold">See projects</a>
+          <a href="#about" class="inline-block rounded-xl border border-zinc-300 dark:border-zinc-700 px-4 py-2 text-sm font-semibold">About</a>
+        </div>
+      </div>
+      <div class="border border-dashed border-zinc-300 dark:border-zinc-700 rounded-2xl p-4 md:p-6">
+        <div class="aspect-video rounded-xl bg-gradient-to-br from-zinc-200 to-zinc-100 dark:from-zinc-800 dark:to-zinc-700 grid place-items-center text-sm text-zinc-600 dark:text-zinc-300">
+          Add a banner image or GIF of your app here (replace this box in <code>index.html</code>)
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filters -->
+  <section id="projects" class="mx-auto max-w-6xl px-4 py-4">
+    <div class="flex flex-wrap items-center gap-3">
+      <h2 class="text-xl md:text-2xl font-bold mr-auto">Projects</h2>
+      <input id="search" type="search" placeholder="Search…" class="w-full sm:w-64 rounded-xl border border-zinc-300 dark:border-zinc-700 bg-white/70 dark:bg-zinc-900/70 px-3 py-2 text-sm"/>
+      <select id="stackFilter" class="rounded-xl border border-zinc-300 dark:border-zinc-700 bg-white/70 dark:bg-zinc-900/70 px-3 py-2 text-sm">
+        <option value="">All stacks</option>
+      </select>
+      <select id="typeFilter" class="rounded-xl border border-zinc-300 dark:border-zinc-700 bg-white/70 dark:bg-zinc-900/70 px-3 py-2 text-sm">
+        <option value="">All types</option>
+      </select>
+    </div>
+
+    <!-- Cards grid -->
+    <div id="cards" class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="mx-auto max-w-6xl px-4 py-10">
+    <h2 class="text-xl md:text-2xl font-bold">About</h2>
+    <div class="mt-3 text-zinc-700 dark:text-zinc-300 space-y-3">
+      <p>
+        I’m a factory veteran turning software engineer. I care about reliability, lean flow, and tools that actually ship. 
+        My current focus: a modular digital twin framework (<strong>Atlas Protocol</strong>), an ERP-driven prioritization layer (KIEL), and a live presence/evacuation dashboard.
+      </p>
+      <p>
+        Keywords: Python, C++, PySide6, VTK, OpenCascade, FastAPI, Dash, Docker, Linux/Windows, OPC UA & MQTT (learning), Industry 4.0/5.0.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact / Footer -->
+  <section id="contact" class="mx-auto max-w-6xl px-4 pb-16">
+    <div class="rounded-2xl border border-zinc-200 dark:border-zinc-800 p-6">
+      <h2 class="text-xl md:text-2xl font-bold">Contact</h2>
+      <p class="mt-2 text-zinc-700 dark:text-zinc-300">Email · LinkedIn · GitHub (add your links below).
+      </p>
+      <div class="mt-3 flex flex-wrap gap-3 text-sm">
+        <!-- Replace # with your actual links -->
+        <a href="#" class="rounded-xl border border-zinc-300 dark:border-zinc-700 px-3 py-1.5 hover:bg-zinc-100 dark:hover:bg-zinc-800">GitHub</a>
+        <a href="#" class="rounded-xl border border-zinc-300 dark:border-zinc-700 px-3 py-1.5 hover:bg-zinc-100 dark:hover:bg-zinc-800">LinkedIn</a>
+        <a href="#" class="rounded-xl border border-zinc-300 dark:border-zinc-700 px-3 py-1.5 hover:bg-zinc-100 dark:hover:bg-zinc-800">Email</a>
+      </div>
+    </div>
+    <p class="mt-6 text-xs text-zinc-500">Built with a single HTML file. Edit the JSON below to update projects. Host on GitHub Pages.</p>
+  </section>
+
+  <!-- Projects data: edit me! -->
+  <script id="projects-data" type="application/json">{
+    "items": [
+      {
+        "title": "Atlas Protocol",
+        "slug": "atlas-protocol",
+        "summary": "Modular digital twin & intent-driven CAD system. GUI in PySide6 + VTK.",
+        "highlights": ["1M cube render → STEP export"],
+        "stack": ["Python", "C++", "PySide6", "VTK", "OpenCascade"],
+        "type": "Desktop",
+        "image": "images/atlas_gui.png",
+        "private": false,
+        "links": {"video": "#", "docs": "#"}
+      },
+      {
+        "title": "Atlas OCC Wrapper)",
+        "slug": "atlas-occ",
+        "summary": "OperCascade Technology (OCC) wrapper in C++/pybind11.",
+        "highlights": ["OCC wrapper for Python"],
+        "stack": ["Python", "C++", "OpenCascade"],
+        "type": "Desktop",
+        "image": "images/atlas_gui.png",
+        "private": true,
+        "links": {"video": "#", "docs": "#"}
+      },
+      {
+        "title": "OnSite Presence Monitor",
+        "slug": "onsite-presence",
+        "summary": "Live presence & evacuation dashboard (web). Pulls data from ERP; shows who is clocked in/out.",
+        "highlights": ["Dash UI", "Evacuation mode", "API-ready"],
+        "stack": ["Python", "Dash"],
+        "type": "Web",
+        "image": "images/onsite_presence.png",
+        "private": false,
+        "links": {"repo": "#"}
+      },
+      {
+        "title": "KIEL – Kanban Intent Execution Layer",
+        "slug": "kiel",
+        "summary": "ERP-driven production prioritization with real-time feasibility and blockers.",
+        "highlights": ["FastAPI backend", "Dash frontend", "Mock ERP client/data"],
+        "stack": ["Python", "FastAPI", "Dash", "Postgres"],
+        "type": "Web",
+        "image": "images/kiel_dashboard.png",
+        "private": true,
+        "links": {"demo": "#", "readme": "#"}
+      }
+    ]
+  }</script>
+
+  <!-- App script: renders the cards from JSON -->
+  <script>
+    const $ = (sel, el = document) => el.querySelector(sel);
+    const $$ = (sel, el = document) => Array.from(el.querySelectorAll(sel));
+
+    const data = JSON.parse(document.getElementById('projects-data').textContent);
+    const cardsEl = document.getElementById('cards');
+    const searchEl = document.getElementById('search');
+    const stackFilterEl = document.getElementById('stackFilter');
+    const typeFilterEl = document.getElementById('typeFilter');
+
+    const stacks = Array.from(new Set(data.items.flatMap(p => p.stack))).sort();
+    stacks.forEach(s => {
+      const o = document.createElement('option');
+      o.value = s; o.textContent = s; stackFilterEl.appendChild(o);
+    });
+    const types = Array.from(new Set(data.items.map(p => p.type))).sort();
+    types.forEach(t => {
+      const o = document.createElement('option');
+      o.value = t; o.textContent = t; typeFilterEl.appendChild(o);
+    });
+
+    function render() {
+      const q = (searchEl.value || '').toLowerCase();
+      const fStack = stackFilterEl.value;
+      const fType = typeFilterEl.value;
+
+      const filtered = data.items.filter(p => {
+        const hay = [p.title, p.summary, p.stack.join(' '), p.highlights.join(' ')].join(' ').toLowerCase();
+        const matchQ = !q || hay.includes(q);
+        const matchS = !fStack || p.stack.includes(fStack);
+        const matchT = !fType || p.type === fType;
+        return matchQ && matchS && matchT;
+      });
+
+      cardsEl.innerHTML = '';
+      if (!filtered.length) {
+        cardsEl.innerHTML = '<p class="text-sm text-zinc-600 dark:text-zinc-400">No projects match your filters.</p>';
+        return;
+      }
+
+      for (const p of filtered) {
+        const card = document.createElement('article');
+        card.className = 'card rounded-2xl border border-zinc-200 dark:border-zinc-800 overflow-hidden bg-white dark:bg-zinc-950 flex flex-col';
+        card.innerHTML = `
+          <div class="aspect-video bg-zinc-100 dark:bg-zinc-800 overflow-hidden">
+            <img src="${p.image}" alt="${p.title}" class="w-full h-full object-cover" onerror="this.style.display='none'">
+          </div>
+          <div class="p-4 grow flex flex-col">
+            <h3 class="font-semibold text-lg">${p.title}</h3>
+            <p class="mt-1 text-sm text-zinc-600 dark:text-zinc-400">${p.summary}</p>
+            <div class="mt-3 flex flex-wrap gap-2">
+              ${p.stack.map(s => `<span class='text-xs rounded-lg border border-zinc-300 dark:border-zinc-700 px-2 py-1'>${s}</span>`).join('')}
+            </div>
+            <ul class="mt-3 text-xs text-zinc-600 dark:text-zinc-400 list-disc pl-5 space-y-1">
+              ${p.highlights.map(h => `<li>${h}</li>`).join('')}
+            </ul>
+            <div class="mt-4 flex flex-wrap gap-2 text-sm">
+              ${p.links?.demo ? `<a class='underline underline-offset-2' href='${p.links.demo}' target='_blank' rel='noreferrer'>Demo</a>` : ''}
+              ${p.links?.video ? `<a class='underline underline-offset-2' href='${p.links.video}' target='_blank' rel='noreferrer'>Video</a>` : ''}
+              ${p.links?.repo ? `<a class='underline underline-offset-2' href='${p.links.repo}' target='_blank' rel='noreferrer'>Repo</a>` : ''}
+              ${p.links?.docs ? `<a class='underline underline-offset-2' href='${p.links.docs}' target='_blank' rel='noreferrer'>Docs</a>` : ''}
+            </div>
+            ${p.private ? `<div class="mt-3 text-[11px] text-amber-700 dark:text-amber-400">Private repo – screenshots & description only</div>` : ''}
+          </div>
+        `;
+        cardsEl.appendChild(card);
+      }
+    }
+
+    searchEl.addEventListener('input', render);
+    stackFilterEl.addEventListener('change', render);
+    typeFilterEl.addEventListener('change', render);
+    render();
+
+    // Dark mode toggle (remembers preference)
+    const modeBtn = document.getElementById('modeBtn');
+    const root = document.documentElement;
+    function setMode(m) {
+      if (m === 'dark') { root.classList.add('dark'); modeBtn.textContent = 'Light'; }
+      else { root.classList.remove('dark'); modeBtn.textContent = 'Dark'; }
+      localStorage.setItem('theme', m);
+    }
+    const pref = localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    setMode(pref);
+    modeBtn.addEventListener('click', () => setMode(root.classList.contains('dark') ? 'light' : 'dark'));
+  </script>
+</body>
+</html>
