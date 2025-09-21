@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>IKT · Projects Portfolio</title>
+  <title>Projects Portfolio</title>
   <meta name="description" content="A clean, single-file portfolio for showcasing software projects. Drop this on GitHub Pages and edit the JSON to update." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,7 +30,7 @@
   <!-- Header / Nav -->
   <header class="sticky top-0 z-30 backdrop-blur supports-[backdrop-filter]:bg-white/60 bg-white/90 dark:bg-zinc-900/90 border-b border-zinc-200 dark:border-zinc-800">
     <div class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
-      <a href="#" class="font-bold tracking-tight text-lg">IKT · Portfolio</a>
+      <a href="#" class="font-bold tracking-tight text-lg">Portfolio</a>
       <nav class="hidden sm:flex gap-6 text-sm">
         <a href="#projects" class="hover:opacity-80">Projects</a>
         <a href="#about" class="hover:opacity-80">About</a>
@@ -49,16 +49,16 @@
         </h1>
         <p class="mt-4 text-zinc-600 dark:text-zinc-400">
           20+ years in transformer manufacturing → transitioning into IT/OT and software. I build 
-          <strong>Python</strong> and <strong>C++</strong> tools (PySide6, VTK, OpenCascade, Dash, FastAPI) that solve real production problems.
+          <strong>Python</strong> and <strong>C++</strong> tools (PySide6, Tkinter, VTK, OpenCascade, Dash, FastAPI) that solve real production problems.
         </p>
         <div class="mt-5 flex gap-3">
           <a href="#projects" class="inline-block rounded-xl bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 px-4 py-2 text-sm font-semibold">See projects</a>
           <a href="#about" class="inline-block rounded-xl border border-zinc-300 dark:border-zinc-700 px-4 py-2 text-sm font-semibold">About</a>
         </div>
       </div>
-      <div class="border border-dashed border-zinc-300 dark:border-zinc-700 rounded-2xl p-4 md:p-6">
+      <div class="border border-dashed border-zinc-300 dark:border-zinc-700 rounded-2xl p-4 md:p-5">
         <div class="aspect-video rounded-xl bg-gradient-to-br from-zinc-200 to-zinc-100 dark:from-zinc-800 dark:to-zinc-700 grid place-items-center text-sm text-zinc-600 dark:text-zinc-300">
-          Add a banner image or GIF of your app here (replace this box in <code>index.html</code>)
+          <img src="images/ProtoXCode.png" width="300">
         </div>
       </div>
     </div>
@@ -86,11 +86,11 @@
     <h2 class="text-xl md:text-2xl font-bold">About</h2>
     <div class="mt-3 text-zinc-700 dark:text-zinc-300 space-y-3">
       <p>
-        I’m a factory veteran turning software engineer. I care about reliability, lean flow, and tools that actually ship. 
+        I'm a factory veteran turning software engineer. I care about reliability, lean flow, and tools that actually ship. 
         My current focus: a modular digital twin framework (<strong>Atlas Protocol</strong>), an ERP-driven prioritization layer (KIEL), and a live presence/evacuation dashboard.
       </p>
       <p>
-        Keywords: Python, C++, PySide6, VTK, OpenCascade, FastAPI, Dash, Docker, Linux/Windows, OPC UA & MQTT (learning), Industry 4.0/5.0.
+        Keywords: Python, C++, PySide6, Tkinter, CustomTkinter, VTK, OpenCascade, FastAPI, Dash, Docker, Linux/Windows, OPC UA & MQTT (learning), Industry 4.0/5.0.
       </p>
     </div>
   </section>
@@ -99,64 +99,86 @@
   <section id="contact" class="mx-auto max-w-6xl px-4 pb-16">
     <div class="rounded-2xl border border-zinc-200 dark:border-zinc-800 p-6">
       <h2 class="text-xl md:text-2xl font-bold">Contact</h2>
-      <p class="mt-2 text-zinc-700 dark:text-zinc-300">Email · LinkedIn · GitHub (add your links below).
+      <p class="mt-2 text-zinc-700 dark:text-zinc-300">You can find me here:
       </p>
       <div class="mt-3 flex flex-wrap gap-3 text-sm">
-        <!-- Replace # with your actual links -->
-        <a href="#" class="rounded-xl border border-zinc-300 dark:border-zinc-700 px-3 py-1.5 hover:bg-zinc-100 dark:hover:bg-zinc-800">GitHub</a>
-        <a href="#" class="rounded-xl border border-zinc-300 dark:border-zinc-700 px-3 py-1.5 hover:bg-zinc-100 dark:hover:bg-zinc-800">LinkedIn</a>
-        <a href="#" class="rounded-xl border border-zinc-300 dark:border-zinc-700 px-3 py-1.5 hover:bg-zinc-100 dark:hover:bg-zinc-800">Email</a>
+        <a href="https://github.com/ProtoXCode" class="rounded-xl border border-zinc-300 dark:border-zinc-700 px-3 py-1.5 hover:bg-zinc-100 dark:hover:bg-zinc-800">GitHub</a>
+        <a href="https://www.linkedin.com/in/tom-erik-harnes/" class="rounded-xl border border-zinc-300 dark:border-zinc-700 px-3 py-1.5 hover:bg-zinc-100 dark:hover:bg-zinc-800">LinkedIn</a>
+        <a href="mailto:teharnes@gmail.com" class="rounded-xl border border-zinc-300 dark:border-zinc-700 px-3 py-1.5 hover:bg-zinc-100 dark:hover:bg-zinc-800">Email</a>
       </div>
     </div>
-    <p class="mt-6 text-xs text-zinc-500">Built with a single HTML file. Edit the JSON below to update projects. Host on GitHub Pages.</p>
   </section>
 
   <!-- Projects data: edit me! -->
   <script id="projects-data" type="application/json">{
     "items": [
       {
-        "title": "Atlas Protocol",
+        "title": "Atlas Protocol [WIP]",
         "slug": "atlas-protocol",
-        "summary": "Modular digital twin & intent-driven CAD system. GUI in PySide6 + VTK.",
+        "summary": "Modular digital twin & intent-driven CAD system. GUI in PySide6 + VTK. Fileless model resolver with compiler mindset, allowing mass customization at scale with integrated FEA/FEM testing to build model by function.",
         "highlights": ["1M cube render → STEP export"],
         "stack": ["Python", "C++", "PySide6", "VTK", "OpenCascade"],
         "type": "Desktop",
-        "image": "images/atlas_gui.png",
+        "image": "images/1_mill.gif",
         "private": false,
-        "links": {"video": "#", "docs": "#"}
+        "links": {
+          "repo": "https://github.com/ProtoXCode/Atlas-Protocol",
+          "video": "https://youtu.be/uB3RwJ-4STQ"}
       },
       {
-        "title": "Atlas OCC Wrapper)",
+        "title": "Atlas OCC Wrapper [WIP]",
         "slug": "atlas-occ",
         "summary": "OperCascade Technology (OCC) wrapper in C++/pybind11.",
-        "highlights": ["OCC wrapper for Python"],
-        "stack": ["Python", "C++", "OpenCascade"],
+        "highlights": ["OCC wrapper for Python", "STEP / STL export", "Model instancing"],
+        "stack": ["Python", "PyBind11", "C++", "OpenCascade"],
         "type": "Desktop",
-        "image": "images/atlas_gui.png",
+        "image": "images/atlas_occ.png",
         "private": true,
-        "links": {"video": "#", "docs": "#"}
+        "links": {}
       },
       {
         "title": "OnSite Presence Monitor",
         "slug": "onsite-presence",
         "summary": "Live presence & evacuation dashboard (web). Pulls data from ERP; shows who is clocked in/out.",
-        "highlights": ["Dash UI", "Evacuation mode", "API-ready"],
+        "highlights": ["Dash UI", "API-ready", "Monitor G5 Client"],
         "stack": ["Python", "Dash"],
         "type": "Web",
         "image": "images/onsite_presence.png",
         "private": false,
-        "links": {"repo": "#"}
+        "links": {"repo": "https://github.com/ProtoXCode/OnSite-Presence-Monitor"}
       },
       {
-        "title": "KIEL – Kanban Intent Execution Layer",
+        "title": "KIEL - Kanban Intent Execution Layer [WIP]",
         "slug": "kiel",
         "summary": "ERP-driven production prioritization with real-time feasibility and blockers.",
         "highlights": ["FastAPI backend", "Dash frontend", "Mock ERP client/data"],
         "stack": ["Python", "FastAPI", "Dash", "Postgres"],
         "type": "Web",
-        "image": "images/kiel_dashboard.png",
+        "image": "images/kiel.png",
         "private": true,
-        "links": {"demo": "#", "readme": "#"}
+        "links": {"docs": "docs/kiel.md"}
+      },
+      {
+        "title": "Ruff Commander",
+        "slug": "ruff_commander",
+        "summary": "Generates winding programs for Ruff LW-120RS winding machines. Import from multiple data types, add parameters and export either to local file or directly to machines via FTP.",
+        "highlights": ["CustomTkinter GUI", "Import CSV/XLSX/PDF", "Output to local file or via FTP"],
+        "stack": ["Python", "CustomTkinter", "FTP"],
+        "type": "Desktop",
+        "image": "images/ruff_commander.png",
+        "private": true,
+        "links": {"image": "images/ruff_commander.png"}
+      },
+      {
+        "title": "Georg TBA-300",
+        "slug": "tba_300",
+        "summary": "Generates core cutting programs for Georg TBA-300 Robotline. Import from text files or manual input. Exports to multiple runnable CSV style file types.",
+        "highlights": ["Tkinter GUI", "Import from text files", "Output to CSV style files"],
+        "stack": ["Python", "Tkinter"],
+        "type": "Desktop",
+        "image": "#",
+        "private": true,
+        "links": {}
       }
     ]
   }</script>
@@ -223,6 +245,7 @@
               ${p.links?.video ? `<a class='underline underline-offset-2' href='${p.links.video}' target='_blank' rel='noreferrer'>Video</a>` : ''}
               ${p.links?.repo ? `<a class='underline underline-offset-2' href='${p.links.repo}' target='_blank' rel='noreferrer'>Repo</a>` : ''}
               ${p.links?.docs ? `<a class='underline underline-offset-2' href='${p.links.docs}' target='_blank' rel='noreferrer'>Docs</a>` : ''}
+              ${p.links?.image ? `<a class='underline underline-offset-2' href='${p.links.image}' target='_blank' rel='noreferrer'>Image</a>` : ''}
             </div>
             ${p.private ? `<div class="mt-3 text-[11px] text-amber-700 dark:text-amber-400">Private repo – screenshots & description only</div>` : ''}
           </div>
