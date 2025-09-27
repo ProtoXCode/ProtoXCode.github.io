@@ -86,11 +86,13 @@
     <h2 class="text-xl md:text-2xl font-bold">About</h2>
     <div class="mt-3 text-zinc-700 dark:text-zinc-300 space-y-3">
       <p>
-        I'm a factory veteran turning software engineer. I care about reliability, lean flow, and tools that actually ship. 
-        My current focus: a modular digital twin framework (<strong>Atlas Protocol</strong>), an ERP-driven prioritization layer (KIEL), and a live presence/evacuation dashboard.
+        <p>I'm a factory veteran turning software engineer. I care about reliability, lean flow, and tools that actually ship. 
+           My current focus: a modular digital twin framework (<strong>Atlas Protocol</strong>), an ERP-driven prioritization layer (KIEL), and a live presence/evacuation dashboard.</p>
+
+        <p>As I'm currently learning C++ I want to redo several of my earlier projects, the business logic is down, only new language, libraries and syntax.</p>
       </p>
       <p>
-        Keywords: Python, C++, PySide6, Tkinter, CustomTkinter, VTK, OpenCascade, FastAPI, Dash, Docker, Linux/Windows, OPC UA & MQTT (learning), Industry 4.0/5.0.
+        Keywords: Python, C++, PySide6, Tkinter, CustomTkinter, VTK, OpenCascade, FastAPI, Dash, Linux/Windows, OPC UA & MQTT (learning), Industry 4.0/5.0.
       </p>
     </div>
   </section>
@@ -156,12 +158,12 @@
         "type": "Web",
         "image": "images/kiel.png",
         "private": true,
-        "links": {"docs": "docs/kiel.md"}
+        "links": {"docs": "docs/kiel.md", "image":"images/kiel.png"}
       },
       {
         "title": "Ruff Commander",
         "slug": "ruff_commander",
-        "summary": "Generates winding programs for Ruff LW-120RS winding machines. Import from multiple data types, add parameters and export either to local file or directly to machines via FTP.",
+        "summary": "Generates winding programs for Ruff LW120-RS winding machines. Import from multiple data types, add parameters and export either to local file or directly to machines via FTP.",
         "highlights": ["CustomTkinter GUI", "Import CSV/XLSX/PDF", "Output to local file or via FTP"],
         "stack": ["Python", "CustomTkinter", "FTP"],
         "type": "Desktop",
@@ -173,10 +175,10 @@
         "title": "Georg TBA-300",
         "slug": "tba_300",
         "summary": "Generates core cutting programs for Georg TBA-300 Robotline. Import from text files or manual input. Exports to multiple runnable CSV style file types.",
-        "highlights": ["Tkinter GUI", "Import from text files", "Output to CSV style files"],
-        "stack": ["Python", "Tkinter"],
+        "highlights": ["Tkinter GUI", "Import from text files", "Takes manual input also", "Output to CSV style files", "Dynamically drawn image of core", "Remote calculations option (API)"],
+        "stack": ["Python", "Tkinter", "FastAPI"],
         "type": "Desktop",
-        "image": "#",
+        "image": "images/tba_300.png",
         "private": true,
         "links": {}
       }
