@@ -119,7 +119,12 @@
         "slug": "atlas-protocol",
         "summary": "Modular digital twin & intent-driven CAD system. GUI in PySide6 + VTK. Fileless model resolver with compiler mindset, allowing mass customization at scale with integrated FEA/FEM testing to build model by function.",
         "highlights": ["1M cube render → STEP export"],
-        "stack": ["Python", "C++", "PySide6", "VTK", "OpenCascade"],
+        "stack": [
+          "Python",
+          "C++",
+          "PySide6",
+          "VTK",
+          "OpenCascade"],
         "type": "Desktop",
         "image": "images/1_mill.gif",
         "private": false,
@@ -131,8 +136,15 @@
         "title": "Atlas OCC Wrapper [WIP]",
         "slug": "atlas-occ",
         "summary": "OperCascade Technology (OCC) wrapper in C++/pybind11.",
-        "highlights": ["OCC wrapper for Python", "STEP / STL export", "Model instancing"],
-        "stack": ["Python", "PyBind11", "C++", "OpenCascade"],
+        "highlights": [
+          "OCC wrapper for Python",
+          "STEP / STL export",
+          "Model instancing"],
+        "stack": [
+          "Python",
+          "PyBind11",
+          "C++",
+          "OpenCascade"],
         "type": "Desktop",
         "image": "images/atlas_occ.png",
         "private": true,
@@ -142,45 +154,97 @@
         "title": "OnSite Presence Monitor",
         "slug": "onsite-presence",
         "summary": "Live presence & evacuation dashboard (web). Pulls data from ERP; shows who is clocked in/out.",
-        "highlights": ["Dash UI", "API-ready", "Monitor G5 Client"],
-        "stack": ["Python", "Dash"],
+        "highlights": [
+          "Dash UI",
+          "API-ready",
+          "Monitor G5 Client"],
+        "stack": [
+          "Python",
+          "Dash"],
         "type": "Web",
         "image": "images/onsite_presence.png",
         "private": false,
-        "links": {"repo": "https://github.com/ProtoXCode/OnSite-Presence-Monitor"}
+        "links": {
+          "repo": "https://github.com/ProtoXCode/OnSite-Presence-Monitor"}
       },
       {
         "title": "KIEL - Kanban Intent Execution Layer [WIP]",
         "slug": "kiel",
         "summary": "ERP-driven production prioritization with real-time feasibility and blockers.",
-        "highlights": ["FastAPI backend", "Dash frontend", "Mock ERP client/data"],
-        "stack": ["Python", "FastAPI", "Dash", "Postgres"],
+        "highlights": [
+          "FastAPI backend",
+          "Dash frontend",
+          "Mock ERP client/data"],
+        "stack": [
+          "Python",
+          "FastAPI",
+          "Dash",
+          "Postgres"],
         "type": "Web",
         "image": "images/kiel.png",
         "private": true,
-        "links": {"docs": "docs/kiel.md", "image":"images/kiel.png"}
+        "links": {
+          "docs": "docs/kiel.md",
+          "image":"images/kiel.png"}
       },
       {
         "title": "Ruff Commander",
         "slug": "ruff_commander",
         "summary": "Generates winding programs for Ruff LW120-RS winding machines. Import from multiple data types, add parameters and export either to local file or directly to machines via FTP.",
-        "highlights": ["CustomTkinter GUI", "Import CSV/XLSX/PDF", "Output to local file or via FTP"],
-        "stack": ["Python", "CustomTkinter", "FTP"],
+        "highlights": [
+          "CustomTkinter GUI",
+          "Import CSV/XLSX/PDF",
+          "Output to local file or via FTP"],
+        "stack": [
+          "Python",
+          "CustomTkinter",
+          "FTP"],
         "type": "Desktop",
         "image": "images/ruff_commander.png",
         "private": true,
-        "links": {"image": "images/ruff_commander.png"}
+        "links": {
+          "image": "images/ruff_commander.png"}
       },
       {
         "title": "Georg TBA-300",
         "slug": "tba_300",
         "summary": "Generates core cutting programs for Georg TBA-300 Robotline. Import from text files or manual input. Exports to multiple runnable CSV style file types.",
-        "highlights": ["Tkinter GUI", "Import from text files", "Takes manual input also", "Output to CSV style files", "Dynamically drawn image of core", "Remote calculations option (API)"],
-        "stack": ["Python", "Tkinter", "FastAPI"],
+        "highlights": [
+          "Tkinter GUI",
+          "Import from text files",
+          "Takes manual input also",
+          "Output to CSV style files",
+          "Dynamically drawn image of core",
+          "Remote calculations option (API)"],
+        "stack": [
+          "Python",
+          "Tkinter",
+          "FastAPI"],
         "type": "Desktop",
         "image": "images/tba_300.png",
         "private": true,
         "links": {}
+      },
+      {
+        "title": "ProtoX GDK [WIP]",
+        "slug": "protox_gdk",
+        "summary": "ProtoX Game Developer Kit, an editor suite for creating sprites, levels and scenes for retro games in Python.",
+        "highlights": [
+          "Custom Tkinter GUI",
+          "Import PNG images",
+          "Simple palette grid drawing",
+          "Saves images as JSON 2S matrix smart objects with metadata",
+          "Export to PNG or animated GIF"],
+        "stack": [
+          "Python",
+          "CustomTkinter",
+          "Pygame"],
+        "type": "Desktop",
+        "image": "images/protox_gdk.gif",
+        "private": true,
+        "links": {
+          "image": "images/protox_gdk.png",
+          "video": "https://www.youtube.com/watch?v=JNLkewfcquA"}
       }
     ]
   }</script>
