@@ -89,10 +89,10 @@
         <p>I'm a factory veteran turning software engineer. I care about reliability, lean flow, and tools that actually ship. 
            My current focus: a modular digital twin framework (<strong>Atlas Protocol</strong>), an ERP-driven prioritization layer (KIEL), and a live presence/evacuation dashboard.</p>
 
-        <p>As I'm currently learning C++ I want to redo several of my earlier projects, the business logic is down, only new language, libraries and syntax.</p>
+        <p>As I'm currently learning C/C++ I want to redo several of my earlier projects, the business logic is down, only new language, libraries and syntax.</p>
       </p>
       <p>
-        Keywords: Python, C++, PySide6, Tkinter, CustomTkinter, VTK, OpenCascade, FastAPI, Dash, Linux/Windows, OPC UA & MQTT (learning), Industry 4.0/5.0.
+        Keywords: Python, C/C++, PySide6, Tkinter, CustomTkinter, VTK, OpenCascade, FastAPI, Dash, Linux/Windows, OPC UA & MQTT (learning), Industry 4.0/5.0.
       </p>
     </div>
   </section>
@@ -114,6 +114,87 @@
   <!-- Projects data: edit me! -->
   <script id="projects-data" type="application/json">{
     "items": [
+      {
+        "title": "Kiosk Rotation Engine",
+        "slug": "kiosk_rotation_engine",
+        "summary": "A lightweight, self-hosted digital signage engine for kiosk displays.<br><br>Drop files in a folder. Screen update automatically. No cloud. No accounts.<br>No nonsense.",
+        "highlights": [
+          "Run service",
+          "Point web viewer to host address",
+          "Drop media into folder",
+          "Auto updates on change"],
+        "stack": [
+          "Python",
+          "FastAPI",
+          "Pillow"],
+        "type": "Web",
+        "image": "images/kiosk.png",
+        "private": false,
+        "links": {
+          "repo": "https://github.com/ProtoXCode/Kiosk-Rotation-Engine"
+        }
+      },
+      {
+        "title": "OnSite Presence Monitor",
+        "slug": "onsite-presence",
+        "summary": "Live presence & evacuation dashboard (web). Pulls data from ERP; shows who is clocked in/out.<br><br>Configurable through config files. Supports image or name cards. Easy to customize logos.",
+        "highlights": [
+          "Dash UI",
+          "API-ready",
+          "Monitor G5 Client",
+          "Write your own client"],
+        "stack": [
+          "Python",
+          "Dash"],
+        "type": "Web",
+        "image": "images/onsite_presence.png",
+        "private": false,
+        "links": {
+          "repo": "https://github.com/ProtoXCode/OnSite-Presence-Monitor"}
+      },
+      {
+        "title": "ProtoX GDK [WIP]",
+        "slug": "protox_gdk",
+        "summary": "ProtoX Game Developer Kit, an editor suite for creating sprites, levels and scenes for retro games in Python.",
+        "highlights": [
+          "Custom Tkinter GUI",
+          "Import PNG images",
+          "Simple palette grid drawing",
+          "Saves images as JSON 2D matrix smart objects with metadata",
+          "Export to PNG or animated GIF"],
+        "stack": [
+          "Python",
+          "CustomTkinter",
+          "Pygame",
+          "Pillow",
+          "NumPy"],
+        "type": "Desktop",
+        "image": "images/protox_gdk.gif",
+        "private": false,
+        "links": {
+          "repo": "https://github.com/ProtoXCode/Protox_GDK",
+          "image": "images/protox_gdk.png",
+          "video": "https://www.youtube.com/watch?v=JNLkewfcquA"}
+      },
+      {
+        "title": "Alien Invasion",
+        "slug": "alien_invasion",
+        "summary": "Alien Invasion from the book 'Python Crash Course' code examples, modified and used as a test bed for GDK, experimenting and learning.",
+        "highlights": [
+          "Imports JSON data as images",
+          "Threaded sound playback",
+          "Test bed for GDK development"],
+        "stack": [
+          "Python",
+          "Pygame",
+          "Threading"],
+        "type": "Desktop",
+        "image": "images/ai_game.png",
+        "private": false,
+        "links": {
+          "repo": "https://github.com/ProtoXCode/alien_invasion"
+        }
+      },
       {
         "title": "Atlas Protocol [WIP]",
         "slug": "atlas-protocol",
@@ -149,23 +230,6 @@
         "image": "images/atlas_occ.png",
         "private": true,
         "links": {}
-      },
-      {
-        "title": "OnSite Presence Monitor",
-        "slug": "onsite-presence",
-        "summary": "Live presence & evacuation dashboard (web). Pulls data from ERP; shows who is clocked in/out.",
-        "highlights": [
-          "Dash UI",
-          "API-ready",
-          "Monitor G5 Client"],
-        "stack": [
-          "Python",
-          "Dash"],
-        "type": "Web",
-        "image": "images/onsite_presence.png",
-        "private": false,
-        "links": {
-          "repo": "https://github.com/ProtoXCode/OnSite-Presence-Monitor"}
       },
       {
         "title": "KIEL - Kanban Intent Execution Layer [WIP]",
@@ -226,30 +290,6 @@
         "links": {}
       },
       {
-        "title": "ProtoX GDK [WIP]",
-        "slug": "protox_gdk",
-        "summary": "ProtoX Game Developer Kit, an editor suite for creating sprites, levels and scenes for retro games in Python.",
-        "highlights": [
-          "Custom Tkinter GUI",
-          "Import PNG images",
-          "Simple palette grid drawing",
-          "Saves images as JSON 2D matrix smart objects with metadata",
-          "Export to PNG or animated GIF"],
-        "stack": [
-          "Python",
-          "CustomTkinter",
-          "Pygame",
-          "Pillow",
-          "NumPy"],
-        "type": "Desktop",
-        "image": "images/protox_gdk.gif",
-        "private": false,
-        "links": {
-          "repo": "https://github.com/ProtoXCode/Protox_GDK",
-          "image": "images/protox_gdk.png",
-          "video": "https://www.youtube.com/watch?v=JNLkewfcquA"}
-      },
-      {
         "title": "GDK Runtime [WIP]",
         "slug": "gdk_runtime",
         "summary": "ProtoX GDK Runtime, to be a pip-installable import that handles the assets created in the GDK framework.",
@@ -264,25 +304,7 @@
         "image": "images/gdk_runtime.png",
         "private": true,
         "links": {}
-      },
-      {
-        "title": "Alien Invasion",
-        "slug": "alien_invasion",
-        "summary": "Alien Invasion from the book 'Python Crash Course' code examples, modified and used as a test bed for GDK, experimenting and learning.",
-        "highlights": [
-          "Imports JSON data as images",
-          "Threaded sound playback"],
-        "stack": [
-          "Python",
-          "Pygame",
-          "Threading"],
-        "type": "Desktop",
-        "image": "images/ai_game.png",
-        "private": false,
-        "links": {
-          "repo": "https://github.com/ProtoXCode/alien_invasion"
-        }
-      }
+      }      
     ]
   }</script>
 
