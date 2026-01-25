@@ -177,6 +177,27 @@
           "video": "https://www.youtube.com/watch?v=JNLkewfcquA"}
       },
       {
+        "title": "ProtoX GateKeeper",
+        "slug": "protox_gatekeeper",
+        "summary": "ProtoX GateKeeper is a small, opinionated Python library that enforces fail-closed Tor routing for HTTP(S) traffic.",
+        "highlights": [
+          "A thin wrapper around requests.Session with safe helpers",
+          "Fail-closed by default (no silent clearnet fallback)",
+          "Observable (exit IP, optional geo info)",
+          "Suitable for scripts, tooling, and automation"],
+        "stack": [
+          "Python",
+          "Requests",
+          "Pysocks"],
+        "type": "Library",
+        "image": "images/bg_pypi_smaller.png",
+        "private": false,
+        "links": {
+          "repo": "https://github.com/ProtoXCode/ProtoX-GateKeeper",
+          "pypi": "https://pypi.org/project/protox-gatekeeper/"
+        }
+      },
+      {
         "title": "Alien Invasion",
         "slug": "alien_invasion",
         "summary": "Alien Invasion from the book 'Python Crash Course' code examples, modified and used as a test bed for GDK, experimenting and learning.",
@@ -369,6 +390,7 @@
               ${p.links?.demo ? `<a class='underline underline-offset-2' href='${p.links.demo}' target='_blank' rel='noreferrer'>Demo</a>` : ''}
               ${p.links?.video ? `<a class='underline underline-offset-2' href='${p.links.video}' target='_blank' rel='noreferrer'>Video</a>` : ''}
               ${p.links?.repo ? `<a class='underline underline-offset-2' href='${p.links.repo}' target='_blank' rel='noreferrer'>Repo</a>` : ''}
+              ${p.links?.pypi ? `<a class='underline underline-offset-2' href='${p.links.pypi}' target='_blank' rel='noreferrer'>PyPi</a>` : ''}
               ${p.links?.docs ? `<a class='underline underline-offset-2' href='${p.links.docs}' target='_blank' rel='noreferrer'>Docs</a>` : ''}
               ${p.links?.image ? `<a class='underline underline-offset-2' href='${p.links.image}' target='_blank' rel='noreferrer'>Image</a>` : ''}
             </div>
